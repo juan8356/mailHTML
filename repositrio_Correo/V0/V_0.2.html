@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ProyeccionesV1</title>
+    <link rel="icon" href="https://i.postimg.cc/FY7fyT3k/LOGO-ETB-1.png" type="image/x-icon">
+</head><style>
+   
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /*tabla1er  */
+    table.main-table {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+    /*celdas */
+    table.main-table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*títulos */
+    h2 {
+        color: #f1f5f5;
+        text-align: center;
+    }
+
+    /* enlaces */
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* móviles */
+    @media screen and (max-width: 700px) {
+        table.main-table {
+            width: 100%;
+        }
+        table.main-table td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        table.main-table td img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+
+<body style="margin: 0; padding: 0; background-color: #d9dee6; font-family: Arial, sans-serif;">
+
+    <!-- Contenedor del correo -->
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+
+                <!-- Tbl1er-->
+                <table cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); ">
+    
+                   <tr>
+                        <td>
+
+                            <!--cuadro pequeño-->
+                            <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#214780">
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                            </table>
+
+                            <!-- Header -->
+                            <table width="100%" cellpadding="10" bgcolor="#f1f5f5" style="max-width: 1000px; overflow: hidden;">
+                                <tr>
+                                    <td>
+                                        <table width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="10%" style="vertical-align: middle; text-align: right;">
+                                                    <img  src="https://i.postimg.cc/FY7fyT3k/LOGO-ETB-1.png" alt="Imagen 1" style="display: block; margin-right: 1px; width: 80px;">
+                                                </td>
+                                                <td width="30%" style="vertical-align: middle; text-align: left;">
+                                                    <img src="https://i.postimg.cc/Vk4bhC7H/VP-Empresas-y-Ciudades-Inteligentes-1.png" alt="Imagen 2" style="display: block; margin-left: 1px; width: 300px;">
+                                                </td>
+                                                <td width="50%" style="vertical-align: middle; text-align: right; white-space: nowrap;">
+                                                    <p style="font-size: 15px; font-family: Arial, sans-serif; margin: 0;">Dirección Control y Gestión Operativa</p>
+                                                    <p style="font-size: 15px; font-family: Arial, sans-serif; margin: 0;"><strong>Grupo Inteligencia Comercial</strong></p>
+                                                </td>                  
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+
+                            <!-- Título -->
+                            <table width="100%" cellpadding="10"  bgcolor="#214780">
+                                <tr>
+                                    <td align="center">
+                                        <h2 style="color: #f1f5f5;">Proyecciones de Ingresos</h2>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- ContenedorCuerpo 1 -->
+                            <table width="100%" cellpadding="10" cellspacing="10" bgcolor="#f1f5f5" style="border-collapse: separate; border-spacing: 0px;">
+                                <tr>
+                                    <td>
+                                        <!-- Cuerpo 1 -->
+                                        <table width="100%" cellpadding="20" cellspacing="0" bgcolor="#FFFFFF">
+                                            <tr>
+                                                <td>
+                                                    <img src="data:image/png;base64,@{outputs('Run_script')?['body/result/base64']}"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                       <!-- Contenedor Cuerpo 2-->
+                            <table width="100%" cellpadding="10" cellspacing="10" bgcolor="#f1f5f5" style="border-collapse: separate; border-spacing: 3px;">
+                                <tr>
+                                    <td>
+
+                                        <!-- Cuerpo 2 -->
+                                        <table width="100%" cellpadding="20" cellspacing="0" bgcolor="#FFFFFF" >
+                                            <tr>
+                                                <td>
+                                                   
+                                                    <p>
+                                                        Buen día, compartimos las Proyecciones de ingresos. <br>
+                                                        <hr>
+                                                        </p>
+                                                        <p style="margin: 0;"><strong>@{concat(outputs('List_rows')?['body/value']?[0]?['PRESENTE'])}</strong></p>
+                                                        <p style="margin-top: -5x; margin-bottom: 0;"><strong>Proyección millones de pesos - (%Cobertura Presupuestal)</strong></p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 0px;"> VP @{concat(outputs('List_rows')?['body/value']?[1]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Gobierno  @{concat(outputs('List_rows')?['body/value']?[2]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;" >&bull; Empresas @{concat(outputs('List_rows')?['body/value']?[3]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Mayoristas @{concat(outputs('List_rows')?['body/value']?[4]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 10; margin-left: 40px;">&bull; Móviles @{concat(outputs('List_rows')?['body/value']?[5]?['PRESENTE'])}</p>
+                                                        
+                                                        <p style="margin: 0; "><strong>Ingresos Reventa</strong></p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0;">@{concat(outputs('List_rows')?['body/value']?[9]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 0px;"> Gobierno @{concat(outputs('List_rows')?['body/value']?[10]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Recurrente @{concat(outputs('List_rows')?['body/value']?[11]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; One Time @{concat(outputs('List_rows')?['body/value']?[12]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Empresas  @{concat(outputs('List_rows')?['body/value']?[13]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Recurrente @{concat(outputs('List_rows')?['body/value']?[14]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 10; margin-left: 40px;">&bull; One Time @{concat(outputs('List_rows')?['body/value']?[15]?['PRESENTE'])}</p>
+                                                        
+                                                        <p style="margin: 0;"><strong>Mayoristas</strong></p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0;">@{concat(outputs('List_rows')?['body/value']?[20]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 0px;"> Carriers@{concat(outputs('List_rows')?['body/value']?[21]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Operadores @{concat(outputs('List_rows')?['body/value']?[22]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0; margin-left: 40px;">&bull; Otros Neg @{concat(outputs('List_rows')?['body/value']?[23]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 10; margin-left: 40px;">&bull; Gpon May @{concat(outputs('List_rows')?['body/value']?[24]?['PRESENTE'])}</p>
+                                                        
+                                                        <p style="margin: 0;"><strong>Moviles</strong></p>
+                                                        <p style="margin-top: -5px; margin-bottom: 0;"> Total @{concat(outputs('List_rows')?['body/value']?[27]?['PRESENTE'])}</p>
+                                                        <p style="margin-top: -5px; margin-bottom: 10; margin-left: 0px;"> SED @{concat(outputs('List_rows')?['body/value']?[28]?['PRESENTE'])}</p>
+
+                                                        <p style="max-width: 400px; font-size: 10px; margin-top: -5px; margin-bottom: 10px; color: #000000;"">Notas:</p>     
+                                                        <p style="max-width: 400px; font-size: 10px; margin-top: -5px; margin-bottom: 10px; color: #000000;">
+                                                            Se incluye proyección del mes de oct-23 con información preliminar hasta el momento. Una vez se cuente con el cierre oficial de ingresos del mes de sep-23 por parte de la VP Financiera, se revisarán las cifras finales de sep-23 y se actualizará lo pertinente para oct-23.
+                                                          </p>
+                                                          
+                                                                                                                       
+
+                                                    <table border="0" cellspacing="0" cellpadding="0" height="30px" align="center" valign="middle">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="164" bgcolor=" #214780" align="center" valign="middle" style="width:164px; padding-top:2px; border-radius:3px; box-shadow:0 2px 4px -0.8px rgba(0,0,0,0.25); text-decoration:none; font-weight:600">
+                                                                    <a href="@{concat(outputs('List_rows')?['body/value']?[7]?['PRESENTE'])}"  target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="font-weight:600; font-size:14px; text-decoration:none; color:#ffffff" data-linkindex="3">&nbsp;&nbsp;Detalles Proyección&nbsp; </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Footer -->
+                            <table width="100%" cellpadding="10" bgcolor="#f1f5f5">
+                                <tr>
+                                    <td>
+                                        <img src="https://i.postimg.cc/FY7fyT3k/LOGO-ETB-1.png" border="0" alt="LOGO-ETB-1" width="50">
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <p style="font-size: 10px; font-family: Arial, sans-serif; margin: 0;">Empresa de Telecomunicaciones de Bogotá S.A.</p>
+                                        <p style="font-size: 10px; font-family: Arial, sans-serif; margin: 0;">Dirección Control y Gestión Operativa</p>
+                                        <p style="font-size: 10px; font-family: Arial, sans-serif; font-weight: bold; margin: 0;">Grupo Inteligencia Comercial</p>
+                                        <p class="link" style="text-align: right; margin: 0;"></p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
